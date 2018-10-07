@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-    name = 'OwO',
-    packages = ['OwO'],
+    name = 'TextToOwO',
+    packages = ['TextToOwO'],
     version = 'v1.0',
     description = 'OwO',
     author = 'Zenrac',
