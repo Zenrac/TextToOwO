@@ -1,10 +1,11 @@
 # OwO-Translator
+TextToOwO is the best twanswatow to impwess youw fwiend (・`ω´・)
 ## Installation
 ### Using pip
 ```
 pip install TextToOwo
 ```
-### Using github
+### Using git
 ```
 pip install git+https://github.com/Zenrac/OwO-Translator
 ```
