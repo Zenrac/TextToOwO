@@ -1,4 +1,4 @@
-# OwO-Translator
+# TextToOwO
 TextToOwO is the best twanswatow to impwess youw fwiend (・`ω´・)
 ## Installation
 ### Using pip
