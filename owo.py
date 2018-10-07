@@ -16,12 +16,12 @@ def text_to_owo(text):
         
     text = text.replace('!', ' {}'.format(random.choice(smileys)))
     text = text.replace('?', '? owo')
-    text = re.sub("\s\s+" , " ", text)
+    text = re.sub('\s\s+' , ' ', text)
     
     for v in vowels:
-        if f'n{v}' in text:
+        if 'n{}'.format(v) in text:
             text = text.replace('n{}'.format(v), 'ny{}'.format(v))
-        if f'N{v}' in text:
+        if 'N{}'.format(v) in text:
             text = text.replace('N{}'.format(v), 'N{}{}'.format('Y' if v.isupper() else 'y', v))
             
     return text
