@@ -1,6 +1,10 @@
 import re
 import random
 
+def last_replace(s, old, new):
+    li = s.rsplit(old, 1)
+    return new.join(li)
+
 def text_to_owo(text):
     """ Converts your text to OwO """
     smileys = ['(・`ω´・)', ';;w;;', '^w^', '>w<', 'UwU']
@@ -14,8 +18,10 @@ def text_to_owo(text):
     while '??' in text:
         text = text.replace('??', '?')
         
-    text = text.replace('!', ' {}'.format(random.choice(smileys)))
-    text = text.replace('?', '? owo')
+    text = last_replace(text, '!', ' {}'.format(random.choice(smileys)))
+    text = last_replace(text, '?', '? owo')
+    text = last_replace(text, '...', 'UwU')
+    text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
     text = re.sub('\s\s+' , ' ', text)
     
     for v in vowels:
@@ -25,3 +31,7 @@ def text_to_owo(text):
             text = text.replace('N{}'.format(v), 'N{}{}'.format('Y' if v.isupper() else 'y', v))
             
     return text
+    
+while True:
+    a = input()
+    print(text_to_owo(a))
