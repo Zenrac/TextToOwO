@@ -3,7 +3,7 @@ TextToOwO is the best twanswatow to impwess youw fwiend (・`ω´・)
 ## Installation
 ### Using pip
 ```
-pip install TextToOwo
+pip install TextToOwO
 ```
 ### Using git
 ```
