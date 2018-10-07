@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-    name = 'OwO-Translator',
-    packages = [],
+    name = 'owo',
+    packages = ['owo'],
     version = 'v1.0',
     description = 'OwO',
     author = 'Zenrac',
