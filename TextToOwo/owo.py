@@ -31,7 +31,3 @@ def text_to_owo(text):
             text = text.replace('N{}'.format(v), 'N{}{}'.format('Y' if v.isupper() else 'y', v))
             
     return text
-    
-while True:
-    a = input()
-    print(text_to_owo(a))
