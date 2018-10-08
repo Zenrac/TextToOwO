@@ -1,6 +1,8 @@
 import re
 import random
 
+vowels = ['a','e','i','o','u','A','E','I','O','U']
+
 def last_replace(s, old, new):
     li = s.rsplit(old, 1)
     return new.join(li)
@@ -9,8 +11,7 @@ def text_to_owo(text):
     """ Converts your text to OwO """
     smileys = [';;w;;', '^w^', '>w<', 'UwU']
     if '`' not in text:
-        smileys.append("(・`ω´・)")
-    vowels = ['a','e','i','o','u','A','E','I','O','U']
+        smileys.append("(・`ω´・)")   
     
     text = text.replace('L', 'W').replace('l', 'w')
     text = text.replace('R', 'W').replace('r', 'w')
@@ -20,11 +21,15 @@ def text_to_owo(text):
     while '??' in text:
         text = text.replace('??', '?')
         
-    text = last_replace(text, '!', ' {}'.format(random.choice(smileys)))
+    choosen = random.choice(smileys) # Don't want the same smiley twice in the same text.
+    smileys.remove(choosen)
+    
+    text = last_replace(text, '!', ' {}'.format(choosen))
     text = last_replace(text, '?', '? owo')
     text = last_replace(text, '...', ' UwU')
     text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
-    text = re.sub('\s\s+' , ' ', text)
+    
+    text = re.sub('\s\s+' , ' ', text) # remove useless space
     
     for v in vowels:
         if 'n{}'.format(v) in text:
