@@ -7,7 +7,9 @@ def last_replace(s, old, new):
 
 def text_to_owo(text):
     """ Converts your text to OwO """
-    smileys = ['(・`ω´・)', ';;w;;', '^w^', '>w<', 'UwU']
+    smileys = [';;w;;', '^w^', '>w<', 'UwU']
+    if '`' not in text:
+        smileys.append("(・`ω´・)")
     vowels = ['a','e','i','o','u','A','E','I','O','U']
     
     text = text.replace('L', 'W').replace('l', 'w')
