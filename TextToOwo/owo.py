@@ -21,10 +21,10 @@ def text_to_owo(text):
     while '??' in text:
         text = text.replace('??', '?')
         
-    choosen = random.choice(smileys) # Don't want the same smiley twice in the same text.
-    smileys.remove(choosen)
+    chosen = random.choice(smileys) # Don't want the same smiley twice in the same text.
+    smileys.remove(chosen)
     
-    text = last_replace(text, '!', ' {}'.format(choosen))
+    text = last_replace(text, '!', ' {}'.format(chosen))
     text = last_replace(text, '?', '? owo')
     text = last_replace(text, '...', ' UwU')
     text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
