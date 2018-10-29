@@ -15,7 +15,6 @@ def text_to_owo(text):
 
     text = last_replace(text, '!', '! {}'.format(random.choice(smileys)))
     text = last_replace(text, '?', '? owo')
-    text = last_replace(text, '...', '... UwU')
     text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
 
     for v in vowels:
