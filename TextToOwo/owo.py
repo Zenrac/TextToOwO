@@ -13,7 +13,7 @@ def text_to_owo(text):
     text = text.replace('L', 'W').replace('l', 'w')
     text = text.replace('R', 'W').replace('r', 'w')
 
-    text = last_replace(text, '!', ' {}'.format(random.choice(smileys)))
+    text = last_replace(text, '!', '! {}'.format(random.choice(smileys)))
     text = last_replace(text, '?', '? owo')
     text = last_replace(text, '...', '... UwU')
     text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
