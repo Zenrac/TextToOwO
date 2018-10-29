@@ -14,17 +14,10 @@ def text_to_owo(text):
     text = text.replace('L', 'W').replace('l', 'w')
     text = text.replace('R', 'W').replace('r', 'w')
 
-    while '!!' in text:
-        text = text.replace('!!', '!')
-    while '??' in text:
-        text = text.replace('??', '?')
-
     text = last_replace(text, '!', ' {}'.format(random.choice(smileys)))
     text = last_replace(text, '?', '? owo')
-    text = last_replace(text, '...', ' UwU')
+    text = last_replace(text, '...', '... UwU')
     text = last_replace(text, '.', '. {}'.format(random.choice(smileys)))
-
-    text = re.sub('\s\s+', ' ', text)  # remove useless space
 
     for v in vowels:
         if 'n{}'.format(v) in text:
