@@ -14,7 +14,7 @@ pip install git+https://github.com/Zenrac/OwO-Translator
 >>> from TextToOwO import owo
 >>> owo.text_to_owo('This is a cool test !')
 
-'This is a coow test ^w^'
+'This is a coow test ! ^w^'
 ```
 ## License
 
