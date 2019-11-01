@@ -7,7 +7,7 @@ pip install TextToOwO
 ```
 ### Using git
 ```
-pip install git+https://github.com/Zenrac/OwO-Translator
+pip install git+https://github.com/Zenrac/TextToOwO
 ```
 ## Usage
 ```py
